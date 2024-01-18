@@ -1,7 +1,9 @@
 package jayslabs.springframeworkdemo;
 
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Primary;
 
 record Person(String name, int age, Address address) {};
 record Address(String firstLine, String city) {};
@@ -28,8 +30,15 @@ public class HWorldConfiguration {
 	public Address address() {
 		return new Address("4 Park", "Toronto");
 	}
+
+	@Bean
+	@Qualifier("chosenaddress")
+	public Address address3() {
+		return new Address("Six Park", "Toronto");
+	}
 	
 	@Bean(name="hideout")
+	@Primary
 	public Address address2() {
 		return new Address("5 Park", "Toronto");
 	}
@@ -40,7 +49,14 @@ public class HWorldConfiguration {
 	}
 	
 	@Bean
-	public Person emergencycontact(String name, int age, Address crib) {
-		return new Person(name, age, crib);
+	public Person emergencycontact(String name, int age, @Qualifier("chosenaddress") Address address) {
+		return new Person(name, age, address);
 	}
+	
+	@Bean
+	@Primary
+	public Person person4(String name, int age, Address address) {
+		return new Person(name, age, address);
+	}
+	
 }

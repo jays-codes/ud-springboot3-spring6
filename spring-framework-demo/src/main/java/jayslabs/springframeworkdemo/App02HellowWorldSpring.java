@@ -1,5 +1,7 @@
 package jayslabs.springframeworkdemo;
 
+import java.util.Arrays;
+
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 public class App02HellowWorldSpring {
@@ -17,10 +19,14 @@ public class App02HellowWorldSpring {
 		System.out.println(context.getBean("age"));
 		System.out.println(context.getBean("person"));
 		System.out.println(context.getBean("crib"));
-		//System.out.println(context.getBean(Address.class));
+		System.out.println(context.getBean(Person.class));
+		System.out.println(context.getBean(Address.class));
 		System.out.println(context.getBean("manager"));
 		System.out.println(context.getBean("emergencycontact"));
 
+		//using Streams, method reference
+		Arrays.stream(context.getBeanDefinitionNames())
+		.forEach(System.out::println);
 	}
 
 }
