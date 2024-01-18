@@ -12,3 +12,5 @@ proj: spring-framework-demo
 - used custom name in bean via 'name' attribute
 - access bean in getBean() via type
 - parameterized bean passing in existing beans to create a new bean
+- used: getBeanDefinitionNames(), getBeanDefinitionCount(), @Primary, @Qualifier
+- used java streams, method reference
