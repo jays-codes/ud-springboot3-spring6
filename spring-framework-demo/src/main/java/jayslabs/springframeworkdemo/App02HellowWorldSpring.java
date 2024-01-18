@@ -2,9 +2,6 @@ package jayslabs.springframeworkdemo;
 
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
-import jayslabs.springframeworkdemo.game.MarioGame;
-import jayslabs.springframeworkdemo.game.PacMan;
-
 public class App02HellowWorldSpring {
 
 	public static void main(String[] args) {
@@ -16,7 +13,11 @@ public class App02HellowWorldSpring {
 		//in context config
 		
 		//use bean
-		System.out.println("bean: "+context.getBean("name"));
+		System.out.println(context.getBean("name"));
+		System.out.println(context.getBean("age"));
+		System.out.println(context.getBean("person"));
+		System.out.println(context.getBean("address"));
+
 	}
 
 }
