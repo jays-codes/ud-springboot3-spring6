@@ -7,4 +7,8 @@ proj: spring-framework-demo
   - org.springframework.context.annotation.AnnotationConfigApplicationContext
   - org.springframework.context.annotation.Configuration
   - org.springframework.context.annotation.Bean
+  - accessed bean via context.getBean()
 - added beans using java record
+- used custom name in bean via 'name' attribute
+- access bean in getBean() via type
+- parameterized bean passing in existing beans to create a new bean
