@@ -8,7 +8,7 @@ public class GameRunner {
 
 	Game game;
 	
-	public GameRunner(@Qualifier("chosengame") Game game) {
+	public GameRunner(@Qualifier("pacman") Game game) {
 		this.game=game;
 	}
 

@@ -4,7 +4,7 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 @Component
-@Qualifier("chosengame")
+@Qualifier("contra")
 public class Contra implements Game {
 
 	@Override
