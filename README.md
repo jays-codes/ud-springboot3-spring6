@@ -15,3 +15,10 @@ proj: spring-framework-demo
 - used: getBeanDefinitionNames(), getBeanDefinitionCount(), @Primary, @Qualifier
 - used java streams, method reference
 - used try-w/-resources to clear out warning on context; modified game package to manage Game on GameRunner in spring
+
+proj: spring-framework-demo2
+- merged Configuration with main entrypoint class
+- Got Spring to create objects via:
+  - @Component
+  - @ComponentScan
+- moved @Primary and @Qualifier to component
