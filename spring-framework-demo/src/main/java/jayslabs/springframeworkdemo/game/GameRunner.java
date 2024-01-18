@@ -1,11 +1,10 @@
-package jayslabs.springframeworkdemo;
+package jayslabs.springframeworkdemo.game;
 
-import jayslabs.springframeworkdemo.game.Game;
+public class GameRunner {
 
-public class LooselyCoupledGameRunner {
 	Game game;
 	
-	public LooselyCoupledGameRunner(Game game) {
+	public GameRunner(Game game) {
 		this.game=game;
 	}
 

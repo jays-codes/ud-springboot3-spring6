@@ -1,6 +1,4 @@
-package jayslabs.springframeworkdemo;
-
-import jayslabs.springframeworkdemo.game.MarioGame;
+package jayslabs.springframeworkdemo.game;
 
 public class TightlyCoupledGameRunner {
 

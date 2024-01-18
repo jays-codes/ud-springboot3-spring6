@@ -1,4 +1,4 @@
-package jayslabs.springframeworkdemo;
+package jayslabs.springframeworkdemo.hworld;
 
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
