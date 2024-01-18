@@ -21,10 +21,10 @@ public class AppGame2Spring {
 		}
 	}
 
-	@Bean
-	public GameRunner gamerunner(@Qualifier("chosengame") Game game) {
-		var runner = new GameRunner(game);
-		return runner;
-	}
+//	@Bean
+//	public GameRunner gamerunner(@Qualifier("chosengame") Game game) {
+//		var runner = new GameRunner(game);
+//		return runner;
+//	}
 
 }

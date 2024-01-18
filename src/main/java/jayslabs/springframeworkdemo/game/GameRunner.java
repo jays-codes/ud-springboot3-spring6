@@ -1,10 +1,14 @@
 package jayslabs.springframeworkdemo.game;
 
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Component;
+
+@Component
 public class GameRunner {
 
 	Game game;
 	
-	public GameRunner(Game game) {
+	public GameRunner(@Qualifier("chosengame") Game game) {
 		this.game=game;
 	}
 
