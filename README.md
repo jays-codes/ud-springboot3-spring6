@@ -14,3 +14,4 @@ proj: spring-framework-demo
 - parameterized bean passing in existing beans to create a new bean
 - used: getBeanDefinitionNames(), getBeanDefinitionCount(), @Primary, @Qualifier
 - used java streams, method reference
+- used try-w/-resources to clear out warning on context; modified game package to manage Game on GameRunner in spring
