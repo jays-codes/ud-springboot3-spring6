@@ -23,3 +23,4 @@ proj: spring-framework-demo2
   - @ComponentScan
 - moved @Primary and @Qualifier to component
 - moved all obj creation to Component; moved resolving of @Qualifier from @Bean to @Component; added @Qualifier to all grouped components with specific names
+- demoed field DI via @Autowired
