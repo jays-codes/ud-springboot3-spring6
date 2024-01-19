@@ -24,4 +24,5 @@ proj: spring-framework-demo2
 - moved @Primary and @Qualifier to component
 - moved all obj creation to Component; moved resolving of @Qualifier from @Bean to @Component; added @Qualifier to all grouped components with specific names
 - demoed field DI via @Autowired
-- demoed setter and constructor DI 
+- demoed setter and constructor DI
+- did exercise 07, inside jayslabs.springframeworkdemo.exercise
