@@ -26,3 +26,4 @@ proj: spring-framework-demo2
 - demoed field DI via @Autowired
 - demoed setter and constructor DI
 - did exercise 07, inside jayslabs.springframeworkdemo.exercise
+- demo for Lazy Initialization (@Lazy), Bean Scopes - @Scope; ConfigurableBeanFactory.SCOPE_PROTOTYPE
