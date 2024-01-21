@@ -28,3 +28,4 @@ proj: spring-framework-demo2
 - did exercise 07, inside jayslabs.springframeworkdemo.exercise
 - demo for Lazy Initialization (@Lazy), Bean Scopes - @Scope; ConfigurableBeanFactory.SCOPE_PROTOTYPE
 - demo for @PostConstruct, @PreDestroy (jakarta.annotation)
+- demo for CDI; @Named, @Inject
