@@ -21,8 +21,10 @@ public class LandlordController {
 	@RequestMapping("/landlords")
 	public List<Landlord> retrieveAllLandlords(){
 		return Arrays.asList(
-				new Landlord(1,"Jay Menorca", "4 Victoria Park"),
-				new Landlord(2,"Saitama Joe", "123 Tokyo")
+				new Landlord(1,"Jay Menorca", "4 Victoria Rd"),
+				new Landlord(2,"Saitam Jo", "123 Tokyo-Tokyo!"),
+				new Landlord(3,"Gintamaaa", "125 Tokyo-Tokyo!")
+
 				);
 	}
 }
