@@ -29,3 +29,4 @@ proj: spring-framework-demo2
 - demo for Lazy Initialization (@Lazy), Bean Scopes - @Scope; ConfigurableBeanFactory.SCOPE_PROTOTYPE
 - demo for @PostConstruct, @PreDestroy (jakarta.annotation)
 - demo for CDI; @Named, @Inject
+- using Spring XML Configuration; ClassPathXmlApplicationContext; <beans>, <bean>, <context:component-scan>, <constructor-arg>
