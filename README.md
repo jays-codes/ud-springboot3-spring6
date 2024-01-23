@@ -31,3 +31,7 @@ proj: spring-framework-demo2
 - demo for CDI; @Named, @Inject
 - using Spring XML Configuration; ClassPathXmlApplicationContext; <beans>, <bean>, <context:component-scan>, <constructor-arg>
 - replace @Component with more specific annotations: @Service, @Repository
+
+proj: springboot-demo
+- created new project : springboot HWorld
+- create SpringBoot REST API; used @RestController, @RequestMapping, pojo (Landlord)
