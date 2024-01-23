@@ -36,3 +36,4 @@ proj: springboot-demo
 - created new project : springboot HWorld
 - create SpringBoot REST API; used @RestController, @RequestMapping, pojo (Landlord)
 - created profiles to simulate different environments; set active profile(spring.profiles.active); set logging according to profile
+- implemented configuration properties; defined ConfigurationPropertiesBean (@ConfigurationProperties); controller to test (config instance field is @Autowired)
