@@ -30,3 +30,4 @@ proj: spring-framework-demo2
 - demo for @PostConstruct, @PreDestroy (jakarta.annotation)
 - demo for CDI; @Named, @Inject
 - using Spring XML Configuration; ClassPathXmlApplicationContext; <beans>, <bean>, <context:component-scan>, <constructor-arg>
+- replace @Component with more specific annotations: @Service, @Repository
