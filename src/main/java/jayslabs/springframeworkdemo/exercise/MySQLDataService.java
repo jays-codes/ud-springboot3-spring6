@@ -1,9 +1,9 @@
 package jayslabs.springframeworkdemo.exercise;
 
 import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Repository;
 
-@Component
+@Repository
 @Qualifier("mysql")
 public class MySQLDataService implements DataService {
 

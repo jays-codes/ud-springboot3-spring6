@@ -2,9 +2,9 @@ package jayslabs.springframeworkdemo.exercise;
 
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Primary;
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Repository;
 
-@Component
+@Repository
 @Primary
 @Qualifier("mongodb")
 public class MongoDbDataService implements DataService {
