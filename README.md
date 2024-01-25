@@ -42,3 +42,4 @@ proj: springboot-demo
 
 proj: jpa-hibernate-demo
 - created new demo proj for JPA, Hibernate concepts (Spring Web, Spring Data JDBC, Spring Data JPA, H2 Database)
+- added static jdbc url via spring.datasource.url for H2 DB; added schema.sql; created schema and table
