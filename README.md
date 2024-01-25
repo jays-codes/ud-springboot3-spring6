@@ -44,3 +44,4 @@ proj: jpa-hibernate-demo
 - created new demo proj for JPA, Hibernate concepts (Spring Web, Spring Data JDBC, Spring Data JPA, H2 Database)
 - added static jdbc url via spring.datasource.url for H2 DB; added schema.sql; created schema and table
 - created @Repository component w/ JdbcTemplate dependency (@Autowired); created CommandLineRunner component with repository dependency to execute repo method inside run()
+- modified @Repository SQL to accept parameters; created pojo; added INSERT (the pojo) and DELETE SQL
