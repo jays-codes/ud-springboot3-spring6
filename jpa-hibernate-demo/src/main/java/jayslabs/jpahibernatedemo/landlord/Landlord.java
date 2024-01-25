@@ -14,6 +14,18 @@ public class Landlord {
 		this.prop = prop;
 	}
 
+	public void setId(long id) {
+		this.id = id;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public void setProp(String prop) {
+		this.prop = prop;
+	}
+
 	public long getId() {
 		return id;
 	}

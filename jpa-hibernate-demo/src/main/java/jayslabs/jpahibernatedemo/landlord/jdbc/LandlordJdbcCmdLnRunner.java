@@ -18,7 +18,9 @@ public class LandlordJdbcCmdLnRunner implements CommandLineRunner{
 		repo.insert(new Landlord(2,"Luffy","Property X124"));
 		repo.insert(new Landlord(3,"Robeen","Property X125"));
 		
-		repo.delete(2);
+		//repo.deleteById(2);
+		Landlord ll = repo.findById(2);
+		System.out.println(ll);
 	}
 
 }
