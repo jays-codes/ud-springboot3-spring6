@@ -1,10 +1,10 @@
-package jayslabs.jpahibernatedemo.landlord.jdbc;
+package jayslabs.jpahibernatedemo.landlord;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
-import jayslabs.jpahibernatedemo.landlord.Landlord;
+import jayslabs.jpahibernatedemo.landlord.jdbc.LandlordJdbcRepository;
 
 @Component
 public class LandlordCmdLnRunner implements CommandLineRunner{
