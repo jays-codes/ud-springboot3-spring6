@@ -39,3 +39,6 @@ proj: springboot-demo
 - implemented configuration properties; defined ConfigurationPropertiesBean (@ConfigurationProperties); controller to test (config instance field is @Autowired)
 - packaged via mvn clean install; console execution
 - enabled Springboot Actuator
+
+proj: jpa-hibernate-demo
+- created new demo proj for JPA, Hibernate concepts (Spring Web, Spring Data JDBC, Spring Data JPA, H2 Database)
