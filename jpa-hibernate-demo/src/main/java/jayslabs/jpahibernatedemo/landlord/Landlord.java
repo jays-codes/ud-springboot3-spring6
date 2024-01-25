@@ -1,8 +1,17 @@
 package jayslabs.jpahibernatedemo.landlord;
 
-import org.springframework.stereotype.Component;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+
+@Entity(name="landlord")
 public class Landlord {
+	
+	@Id
+	private long id;
+	private String name;
+	private String prop;
+	
 	public Landlord() {
 
 	}
@@ -43,7 +52,5 @@ public class Landlord {
 		return "Landlord [id=" + id + ", name=" + name + ", prop=" + prop + "]";
 	}
 
-	private long id;
-	private String name;
-	private String prop;
+
 }
