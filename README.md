@@ -46,4 +46,4 @@ proj: jpa-hibernate-demo
 - created @Repository component w/ JdbcTemplate dependency (@Autowired), update(); created CommandLineRunner component with repository dependency to execute repo method inside run()
 - modified @Repository SQL to accept parameters; created pojo; added INSERT (the pojo) and DELETE SQL
 - added SELECT SQL to return pojo; used queryForObject() from JdbcTemplate and BeanPropertyRowMapper inside @Repository method
-- used JPA; used @Entity, @Id, @Column on javabean; create new @Repository with dependency on EntityManager (@PersistenceContext); used em.find(), em.merge, em.remove()
+- used JPA; used @Entity, @Id, @Column on javabean; create new @Repository (also @Transactional) with dependency on EntityManager (@PersistenceContext); used em.find(), em.merge, em.remove()
