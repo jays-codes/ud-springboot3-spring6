@@ -7,6 +7,7 @@
 <title>Login</title>
 </head>
 <body>
-	Log-in Page
+	<h3>Hello ${name}!</h3>
+	 
 </body>
 </html>
