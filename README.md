@@ -2,6 +2,7 @@
 Jay's proj repo for Springboot 3 and Spring Framework 6 training (conducted by R.Karanam - udemy) (from latest)
 
 proj: todolist-webapp-demo (dep: Spring Web, SpringBoot DevTools | jdk17, mvn, springboot 3.2.2)
+- used JSTL; added dependencies; c:forEach
 - used @SessionAttributes; routed from jsp
 - Wrote 'Todo' bean, @Service, @Controller, jsp; used map.addAttribute()
 - Login page; used ModelMap, DispatcherServlet
@@ -10,8 +11,7 @@ proj: todolist-webapp-demo (dep: Spring Web, SpringBoot DevTools | jdk17, mvn, s
 - added jsp; controller, view resolvers in app.prop; tomcat-embed-jasper dependency
 - used @Controller, @ResponseBody
 
-proj: jpa-hibernate-demo (dep: Spring Web, Spring Data JDBC, Spring Data JPA, H2 Databse)
-- jdk 17, mvn, springboot 3.2.2
+proj: jpa-hibernate-demo (dep: Spring Web, Spring Data JDBC, Spring Data JPA, H2 Databse | jdk 17, mvn, springboot 3.2.2)
 - created new demo proj for JPA, Hibernate concepts (Spring Web, Spring Data JDBC, Spring Data JPA, H2 Database)
 - added static jdbc url via spring.datasource.url for H2 DB; added schema.sql; created schema and table
 - created @Repository component w/ JdbcTemplate dependency (@Autowired), update(); created CommandLineRunner component with repository dependency to execute repo method inside run()
