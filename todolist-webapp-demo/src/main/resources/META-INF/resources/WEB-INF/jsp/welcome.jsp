@@ -7,6 +7,7 @@
 <title>welcome</title>
 </head>
 <body>
-	<div>WELCOME ${name}</div>
+	<div>Welcome ${name}</div>
+	<div><a href="listtodos">Manage</a> your todos</div>
 </body>
 </html>

@@ -5,19 +5,19 @@ import java.util.List;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.SessionAttributes;
 
 import jayslabs.todolistwebappdemo.todo.Todo;
 import jayslabs.todolistwebappdemo.todo.TodoService;
 
 @Controller
+@SessionAttributes("name")
 public class TodoController {
 	
 	public TodoController(TodoService todosrvc) {
 		super();
 		this.todosrvc = todosrvc;
 	}
-
 	
 	private TodoService todosrvc;
 	
