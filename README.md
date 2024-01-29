@@ -56,3 +56,4 @@ proj: todolist-webapp-demo (dep: Spring Web, SpringBoot DevTools)
 - used @Controller, @ResponseBody
 - added jsp; controller, view resolvers in app.prop; tomcat-embed-jasper dependency
 - capture Query Params (@RequestParam); used org.springframework.ui.ModelMap; used el in jsp to output model
+- Logging(slf4j); Logger, LoggerFactory, getLogger(), .info(), .debug() 
