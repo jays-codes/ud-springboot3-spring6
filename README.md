@@ -58,3 +58,4 @@ proj: todolist-webapp-demo (dep: Spring Web, SpringBoot DevTools)
 - capture Query Params (@RequestParam); used org.springframework.ui.ModelMap; used el in jsp to output model
 - Logging(slf4j); Logger, LoggerFactory, getLogger(), .info(), .debug()
 - Login page; used ModelMap, DispatcherServlet
+- Wrote 'Todo' bean, @Service, @Controller, jsp; used map.addAttribute() 
