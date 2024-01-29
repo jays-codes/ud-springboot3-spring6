@@ -14,11 +14,11 @@ public class TodoService {
 				LocalDate.now().plusWeeks(2), false));
 		todos.add(new Todo(2,"SpringBoot", "Learn SpringBoot",
 				LocalDate.now().plusWeeks(4), false));
-		todos.add(new Todo(2,"SpringJPA", "Learn SpringJPA",
+		todos.add(new Todo(3,"SpringJPA", "Learn SpringJPA",
 				LocalDate.now().plusWeeks(5), false));
-		todos.add(new Todo(2,"SpringBootMicroservices", "Learn SpringBoot Microservices",
+		todos.add(new Todo(4,"SpringBootMicroservices", "Learn SpringBoot Microservices",
 				LocalDate.now().plusWeeks(7), false));
-		todos.add(new Todo(2,"KafkaRabbitMQ", "Learn Apache Kafka Rabbit MQ",
+		todos.add(new Todo(5,"KafkaRabbitMQ", "Learn Apache Kafka Rabbit MQ",
 				LocalDate.now().plusWeeks(8), false));
 	}
 	public static List<Todo> findByUsername(String name) {
