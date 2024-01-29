@@ -54,3 +54,4 @@ proj: jpa-hibernate-demo (dep: Spring Web, Spring Data JDBC, Spring Data JPA, H2
 proj: todolist-webapp-demo (dep: Spring Web, SpringBoot DevTools)
 - jdk17, mvn, springboot 3.2.2
 - used @Controller, @ResponseBody
+- added jsp; controller, view resolvers in app.prop; tomcat-embed-jasper dependency
