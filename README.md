@@ -32,7 +32,7 @@ proj: spring-framework-demo2
 - using Spring XML Configuration; ClassPathXmlApplicationContext; <beans>, <bean>, <context:component-scan>, <constructor-arg>
 - replace @Component with more specific annotations: @Service, @Repository
 
-proj: springboot-demo
+proj: springboot-demo 
 - created new project : springboot HWorld
 - create SpringBoot REST API; used @RestController, @RequestMapping, pojo (Landlord)
 - created profiles to simulate different environments; set active profile(spring.profiles.active); set logging according to profile
@@ -40,7 +40,8 @@ proj: springboot-demo
 - packaged via mvn clean install; console execution
 - enabled Springboot Actuator
 
-proj: jpa-hibernate-demo
+proj: jpa-hibernate-demo (dep: Spring Web, Spring Data JDBC, Spring Data JPA, H2 Databse)
+- jdk 17, mvn, springboot 3.2.2
 - created new demo proj for JPA, Hibernate concepts (Spring Web, Spring Data JDBC, Spring Data JPA, H2 Database)
 - added static jdbc url via spring.datasource.url for H2 DB; added schema.sql; created schema and table
 - created @Repository component w/ JdbcTemplate dependency (@Autowired), update(); created CommandLineRunner component with repository dependency to execute repo method inside run()
@@ -49,3 +50,7 @@ proj: jpa-hibernate-demo
 - used JPA; used @Entity, @Id, @Column on javabean; create new @Repository (also @Transactional) with dependency on EntityManager (@PersistenceContext); used em.find(), em.merge, em.remove()
 - used SpringDataJPA - org.springframework.data.jpa.repository.JpaRepository; CRUD functionality automatically defined and autowired into instance
 - custom findby() in JpaRepository interface; JpaRepository.count() 
+
+proj: todolist-webapp-demo (dep: Spring Web, SpringBoot DevTools)
+- jdk17, mvn, springboot 3.2.2
+- used @Controller, @ResponseBody
