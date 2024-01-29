@@ -7,6 +7,8 @@
 <title>Login</title>
 </head>
 <body>
+	<div>${error}</div>
+
 	<form method="post">
 	Name: <input type="text" name="name"><p>
 	Password: <input type="password" name="pwd">
