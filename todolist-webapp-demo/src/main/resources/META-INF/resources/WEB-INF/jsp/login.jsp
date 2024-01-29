@@ -7,7 +7,10 @@
 <title>Login</title>
 </head>
 <body>
-	<h3>Hello ${name}!</h3>
-	 
+	<form method="post">
+	Name: <input type="text" name="name"><p>
+	Password: <input type="password" name="pwd">
+	<input type="submit">
+	</form>	 
 </body>
 </html>
