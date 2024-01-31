@@ -2,7 +2,10 @@ package jayslabs.todolistwebappdemo.todo;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
+import java.util.function.Predicate;
+import java.util.stream.Collectors;
 
 import org.springframework.stereotype.Service;
 
@@ -28,19 +31,31 @@ public class TodoService {
 	
 	public Todo createToDo(String desc) {
 		String todoname = desc.replaceAll("\\s","");
+		
 		Todo newtd = new Todo(
-						todos.size()+1, todoname, desc,LocalDate.now().plusWeeks(1), false);
+				createId(), todoname, desc,LocalDate.now().plusWeeks(1), false);
 		return newtd;
 	}
 	
-	public void addTodo(String description) {
+	private int createId() {
+		List<Integer> ids = todos.stream()
+				.map(Todo::getId)
+				.collect(Collectors.toList());
 		
-//		String todoname = description.replaceAll("\\s","");
+		Integer top = Collections.max(ids);
+		return top.intValue()+1;
+	}
+
+	public void addTodo(String description) {
 		todos.add(this.createToDo(description));
-				
-//				new Todo(
-//						todos.size()+1, todoname, description,LocalDate.now().plusWeeks(1), false));
-//
+	}
+
+	public void deleteToDo(int id) {
+		//checks if id is present in the list
+		Predicate<? super Todo> predicate = todo -> todo.getId()==id;
+		todos.removeIf(predicate);
+		
+		//todos.remove(id);
 	}
 	
 }

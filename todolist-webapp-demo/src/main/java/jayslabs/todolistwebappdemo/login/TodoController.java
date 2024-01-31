@@ -35,7 +35,7 @@ public class TodoController {
 	
 	@RequestMapping("addtodo")
 	public String showAddTodoPage(ModelMap model) {
-		Todo todo = todosrvc.createToDo("Default Desc");
+		Todo todo = todosrvc.createToDo("");
 		model.put("todo",todo);
 		return "addtodo";
 	}
@@ -48,6 +48,12 @@ public class TodoController {
 		}
 		
 		todosrvc.addTodo(todo.getDescription());
+		return "redirect:listtodos";
+	}
+	
+	@RequestMapping(value="deletetodo")
+	public String deleteTodo(@RequestParam int id) {
+		todosrvc.deleteToDo(id);
 		return "redirect:listtodos";
 	}
 	

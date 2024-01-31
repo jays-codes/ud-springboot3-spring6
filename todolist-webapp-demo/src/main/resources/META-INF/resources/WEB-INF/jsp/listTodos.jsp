@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -20,10 +20,11 @@
 		<table class="table">
 			<thead>
 				<tr>
-					<th>id</th>
-					<th>description</th>
-					<th>target date</th>
-					<th>done?</th>
+					<th>Id</th>
+					<th>Description</th>
+					<th>Target date</th>
+					<th>Done?</th>
+					<th></th>
 				</tr>
 			</thead>
 			<tbody>
@@ -33,6 +34,9 @@
 						<td>${todo.description}</td>
 						<td>${todo.targetDate}</td>
 						<td>${todo.done}</td>
+						<td>
+						<a href="deletetodo?id=${todo.id}" class="btn btn-danger">x</a>
+						</td>
 					</tr>
 				</c:forEach>
 			</tbody>
