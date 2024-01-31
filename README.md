@@ -1,7 +1,8 @@
 # ud-springboot3-spring6
-Jay's proj repo for Springboot 3 and Spring Framework 6 training (conducted by R.Karanam - udemy) (from latest)
+Jay's proj repo for Springboot 3 and Spring Framework 6 training (conducted by R.Karanam - udemy) (from latest). List below ARE NOT NOTES. They are topics covered as of latest. 
 
 proj: todolist-webapp-demo (dep: Spring Web, SpringBoot DevTools | jdk17, mvn, springboot 3.2.2)
+- Added dependency spring-boot-starter-validation; added Spring Form Tag Library (form:form, form:input, etc.); wrote CommandBean/FormBackingObject
 - created 'add todo'; used new bootstrap class values
 - enabled bootstrap and jquery; added dep, modified jsp; class="container" | "table"
 - used JSTL; added dependencies; c:forEach
