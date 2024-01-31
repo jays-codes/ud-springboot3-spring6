@@ -2,9 +2,13 @@ package jayslabs.todolistwebappdemo.todo;
 
 import java.time.LocalDate;
 
+import jakarta.validation.constraints.Size;
+
 public class Todo {
 	private int id;
 	private String todoname;
+	
+	@Size(min=10, message="Enter at least 10 chars")
 	private String description;
 	private LocalDate targetDate;
 	private boolean done;
@@ -12,7 +16,7 @@ public class Todo {
 	public Todo(int id, String todoname, String description, LocalDate targetDate, boolean done) {
 		super();
 		this.id = id;
-		this.todoname = todoname;
+		this.todoname = todoname;		
 		this.description = description;
 		this.targetDate = targetDate;
 		this.done = done;
