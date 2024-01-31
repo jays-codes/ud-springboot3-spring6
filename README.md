@@ -2,6 +2,7 @@
 Jay's proj repo for Springboot 3 and Spring Framework 6 training (conducted by R.Karanam - udemy) (from latest). List below ARE NOT NOTES. They are topics covered as of latest. 
 
 proj: todolist-webapp-demo (dep: Spring Web, SpringBoot DevTools | jdk17, mvn, springboot 3.2.2)
+- added Delete bean functionality via Id; used java predicate to evaluate bean id, removeIf(predicate)
 - used @Size in Bean; BindingResult, @Valid, .hasErrors() in Controller; <form:errors>, cssClass="text-warning" in jsp 
 - Added dependency spring-boot-starter-validation; added Spring Form Tag Library (form:form, form:input, etc.); wrote CommandBean/FormBackingObject
 - created 'add todo'; used new bootstrap class values
