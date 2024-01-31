@@ -26,12 +26,21 @@ public class TodoService {
 		return todos;
 	}
 	
+	public Todo createToDo(String desc) {
+		String todoname = desc.replaceAll("\\s","");
+		Todo newtd = new Todo(
+						todos.size()+1, todoname, desc,LocalDate.now().plusWeeks(1), false);
+		return newtd;
+	}
+	
 	public void addTodo(String description) {
 		
-		String todoname = description.replaceAll("\\s","");
-		todos.add(new Todo(
-						todos.size()+1, todoname, description,LocalDate.now().plusWeeks(1), false));
-
+//		String todoname = description.replaceAll("\\s","");
+		todos.add(this.createToDo(description));
+				
+//				new Todo(
+//						todos.size()+1, todoname, description,LocalDate.now().plusWeeks(1), false));
+//
 	}
 	
 }
