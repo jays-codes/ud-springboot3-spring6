@@ -21,7 +21,17 @@ public class TodoService {
 		todos.add(new Todo(5,"KafkaRabbitMQ", "Learn Apache Kafka Rabbit MQ",
 				LocalDate.now().plusWeeks(8), false));
 	}
+	
 	public static List<Todo> findByUsername(String name) {
 		return todos;
 	}
+	
+	public void addTodo(String description) {
+		
+		String todoname = description.replaceAll("\\s","");
+		todos.add(new Todo(
+						todos.size()+1, todoname, description,LocalDate.now().plusWeeks(1), false));
+
+	}
+	
 }

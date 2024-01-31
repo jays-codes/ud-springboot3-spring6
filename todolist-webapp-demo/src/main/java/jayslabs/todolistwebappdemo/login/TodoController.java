@@ -1,10 +1,13 @@
 package jayslabs.todolistwebappdemo.login;
 
+import java.time.LocalDate;
 import java.util.List;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.SessionAttributes;
 
 import jayslabs.todolistwebappdemo.todo.Todo;
@@ -26,6 +29,18 @@ public class TodoController {
 		List<Todo> todos =  todosrvc.findByUsername("all");
 		map.addAttribute("todos", todos);
 		return "listTodos";
+	}
+	
+	@RequestMapping("addtodo")
+	public String showTodoPage() {
+		return "addtodo";
+	}
+	
+	@RequestMapping(value="addtodo", method=RequestMethod.POST)
+	public String addTodo(@RequestParam String description, ModelMap map) {
+		
+		todosrvc.addTodo(description);
+		return "redirect:listtodos";
 	}
 	
 }

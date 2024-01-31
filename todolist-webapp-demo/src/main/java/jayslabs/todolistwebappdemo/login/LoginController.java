@@ -18,13 +18,6 @@ public class LoginController {
 	@Autowired
 	private AuthenticationService authSrvc;
 	
-//	@RequestMapping("loginsample")
-//	public String login(@RequestParam String name, ModelMap model) {
-//		model.put("name", name);
-//		logger.debug("Request param is {}", name);
-//		return "login";
-//	}
-	
 	@RequestMapping(value="login", method=RequestMethod.GET)
 	public String goToLogin() {
 		return "login";

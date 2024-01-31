@@ -6,18 +6,15 @@
 <link href="webjars/bootstrap/5.3.2/css/bootstrap.min.css"
 	rel="stylesheet">
 <meta charset="UTF-8">
-<title>Login</title>
+<title>Add Todo</title>
 </head>
 <body>
-	<div class="container form-check mb-3 mt-3">
-		<h1>Login</h1>
-		<pre>${error}</pre>
-
+	<div class="container form-check">
+		<h1>Enter Todo Details</h1>
 		<form method="post">
-			Name: <input class="form-control" type="text" name="name">
-			<p>
-				Password: <input class="form-control" type="password" name="pwd">
-				<input type="submit" class="btn btn-success">
+			Description: <input type="text" name="description" class="form-control" /> <input
+				type="submit" class="btn btn-success">
+
 		</form>
 	</div>
 	<script src="webjars/bootstrap/5.3.2/js/bootstrap.min.js"></script>
