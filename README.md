@@ -2,7 +2,8 @@
 Jay's proj repo for Springboot 3 and Spring Framework 6 training (conducted by R.Karanam - udemy) (from latest)
 
 proj: todolist-webapp-demo (dep: Spring Web, SpringBoot DevTools | jdk17, mvn, springboot 3.2.2)
-- used bootstrap and jquery; added dep, modified jsp; class="container" | "table"
+- created 'add todo'; used new bootstrap class values
+- enabled bootstrap and jquery; added dep, modified jsp; class="container" | "table"
 - used JSTL; added dependencies; c:forEach
 - used @SessionAttributes; routed from jsp
 - Wrote 'Todo' bean, @Service, @Controller, jsp; used map.addAttribute()
