@@ -31,13 +31,13 @@ public class TodoService {
 		return todos;
 	}
 	
-	public Todo createToDo(String desc) {
-		String todoname = desc.replaceAll("\\s","");
-		
-		Todo newtd = new Todo(
-				createId(), todoname, desc,LocalDate.now().plusWeeks(1), false);
-		return newtd;
-	}
+//	public Todo createToDo(String desc) {
+//		String todoname = desc.replaceAll("\\s","");
+//		
+//		Todo newtd = new Todo(
+//				createId(), todoname, desc,LocalDate.now().plusWeeks(1), false);
+//		return newtd;
+//	}
 	
 	private int createId() {
 		List<Integer> ids = todos.stream()
@@ -48,8 +48,14 @@ public class TodoService {
 		return top.intValue()+1;
 	}
 
-	public void addTodo(String description) {
-		todos.add(this.createToDo(description));
+	public void addTodo(Todo todo) {
+		//todos.add(this.createToDo(description));
+		String desc = todo.getDescription();
+		String todoname = desc.replaceAll("\\s","");
+		
+		Todo newtd = new Todo(
+				createId(), todoname, desc,todo.getTargetDate(), false);
+		todos.add(newtd);
 	}
 
 	public void deleteToDo(int id) {
@@ -66,6 +72,7 @@ public class TodoService {
 	public void updateTodo(@Valid Todo todo) {
 		Todo origtd = retrieveToDo(todo.getId());
 		origtd.setDescription(todo.getDescription());
+		origtd.setTargetDate(todo.getTargetDate());
 	}
 	
 }

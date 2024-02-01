@@ -35,7 +35,8 @@ public class TodoController {
 	
 	@RequestMapping("addtodo")
 	public String showAddTodoPage(ModelMap model) {
-		Todo todo = todosrvc.createToDo("");
+		Todo todo = new Todo(0, "","",LocalDate.now(), false);
+		//Todo todo = todosrvc.createToDo("");
 		model.put("todo",todo);
 		return "addtodo";
 	}
@@ -54,7 +55,7 @@ public class TodoController {
 				return "addtodo";
 		}
 		
-		todosrvc.addTodo(todo.getDescription());
+		todosrvc.addTodo(todo);
 		return "redirect:listtodos";
 	}
 
