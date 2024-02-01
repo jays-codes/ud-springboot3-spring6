@@ -4,7 +4,6 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
-import java.util.Optional;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
@@ -60,7 +59,7 @@ public class TodoService {
 	}
 
 	public Todo retrieveToDo(int id) {
-		Todo td = todos.stream().filter(t -> t.getId()==id).findAny().orElse(null);
+		Todo td = todos.stream().filter(t -> t.getId()==id).findFirst().get();//.orElse(null);
 		return td;
 	}
 

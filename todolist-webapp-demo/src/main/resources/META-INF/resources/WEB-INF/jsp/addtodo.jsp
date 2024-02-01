@@ -8,18 +8,18 @@
 <link href="webjars/bootstrap/5.3.2/css/bootstrap.min.css"
 	rel="stylesheet">
 <meta charset="UTF-8">
-<title>Add Todo</title>
+<title>Add/Update Todo</title>
 </head>
 <body>
 	<div class="container form-check">
-		<h1>Enter Todo Details</h1>
+		<h1>Todo Details</h1>
 		<form:form method="post" modelAttribute="todo">
 			Description: <form:input type="text" path="description" class="form-control" required="required" /> 
 			<form:errors path="description" cssClass="text-warning" />
 			<form:input type="hidden" path="id" class="form-control" />
 			<form:input type="hidden" path="done" class="form-control" />
 			<input
-				type="submit" class="btn btn-success">
+				type="submit" class="btn btn-success" value="Save">
 
 		</form:form>
 	</div>

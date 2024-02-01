@@ -40,6 +40,12 @@ public class TodoController {
 		return "addtodo";
 	}
 	
+	@RequestMapping("updatetodo")
+	public String showUpdateTodoPage(ModelMap map, @RequestParam int id) {
+		Todo todo = todosrvc.retrieveToDo(id);
+		map.put("todo",todo);
+		return "addtodo";
+	}
 	
 	@RequestMapping(value="addtodo", method=RequestMethod.POST)
 	public String addTodo(ModelMap map, @Valid Todo todo, BindingResult bres) {
@@ -52,19 +58,11 @@ public class TodoController {
 		return "redirect:listtodos";
 	}
 
-	@RequestMapping("updatetodo")
-	public String showUpdateTodoPage(ModelMap map, @RequestParam int id) {
-		Todo todo = todosrvc.retrieveToDo(id);
-		map.addAttribute("todo",todo);
-		return "updatetodo";
-	}
-	
-	
 	@RequestMapping(value="updatetodo", method=RequestMethod.POST)
 	public String updateTodo(ModelMap map, @Valid Todo todo, BindingResult bres) {
 		
 		if(bres.hasErrors()) {
-				return "updatetodo";
+				return "addtodo";
 		}
 		
 		todosrvc.updateTodo(todo);
