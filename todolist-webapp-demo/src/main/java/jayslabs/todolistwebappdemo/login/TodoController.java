@@ -26,6 +26,12 @@ public class TodoController {
 	
 	private TodoService todosrvc;
 	
+	@RequestMapping("welcome")
+	public String gotoWelcomPage(ModelMap map) {
+		return "welcome";
+	}
+
+	
 	@RequestMapping("listtodos")
 	public String listAllTodos(ModelMap map) {
 		List<Todo> todos =  todosrvc.findByUsername("all");
