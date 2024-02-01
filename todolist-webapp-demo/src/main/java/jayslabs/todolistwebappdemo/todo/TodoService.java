@@ -4,10 +4,13 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.Optional;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
 import org.springframework.stereotype.Service;
+
+import jakarta.validation.Valid;
 
 @Service
 public class TodoService {
@@ -54,8 +57,16 @@ public class TodoService {
 		//checks if id is present in the list
 		Predicate<? super Todo> predicate = todo -> todo.getId()==id;
 		todos.removeIf(predicate);
-		
-		//todos.remove(id);
+	}
+
+	public Todo retrieveToDo(int id) {
+		Todo td = todos.stream().filter(t -> t.getId()==id).findAny().orElse(null);
+		return td;
+	}
+
+	public void updateTodo(@Valid Todo todo) {
+		Todo origtd = retrieveToDo(todo.getId());
+		origtd.setDescription(todo.getDescription());
 	}
 	
 }
