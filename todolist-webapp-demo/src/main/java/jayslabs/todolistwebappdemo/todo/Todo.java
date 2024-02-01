@@ -10,6 +10,7 @@ public class Todo {
 	
 	@Size(min=10, message="Enter at least 10 chars")
 	private String description;
+	//@DateTimeFormat(pattern="yyyy-MM-dd")
 	private LocalDate targetDate;
 	private boolean done;
 	
