@@ -2,6 +2,7 @@
 Jay's proj repo for Springboot 3 and Spring Framework 6 training (conducted by R.Karanam - udemy) (from latest). List below ARE NOT NOTES. They are topics covered as of latest. 
 
 proj: todolist-webapp-demo (dep: Spring Web, SpringBoot DevTools | jdk17, mvn, springboot 3.2.2)
+- implemented spring-boot-starter-security; org.spring.security.core/crypto/provisioning APIs: User, UserDetails, BCryptPasswordEncoder, PasswordEncoder, InMemoryUserDetailsManager
 - added jspf - navi, header, footer;
 - added targetDate datepicker; bootstrap-datepicker; configured js component for targetDate
 - added Update bean; shared bean details jsp with Add bean; added methods to service and controller to do update and, return bean by ID
