@@ -2,10 +2,10 @@
 <%@include file="common/header.jspf"%>
 <%@include file="common/navigation.jspf"%>
 <div class="container">
-	<!--  
+<!-- 
 		<div>Welcome ${name}</div>
 		<hr>
-		-->
+ -->
 	<h1>Your Todos are</h1>
 	<table class="table">
 		<thead>

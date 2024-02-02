@@ -32,14 +32,15 @@ public class TodoController {
 	
 	@RequestMapping("listtodos")
 	public String listAllTodos(ModelMap map) {
-		List<Todo> todos =  todosrvc.findByUsername("all");
+		String name = (String) map.get("name");
+		List<Todo> todos =  todosrvc.findByUsername(name);
 		map.addAttribute("todos", todos);
 		return "listTodos";
 	}
 	
 	@RequestMapping("addtodo")
 	public String showAddTodoPage(ModelMap model) {
-		Todo todo = new Todo(0, "","",LocalDate.now(), false);
+		Todo todo = new Todo(0, "jaymenorca","",LocalDate.now(), false);
 		//Todo todo = todosrvc.createToDo("");
 		model.put("todo",todo);
 		return "addtodo";

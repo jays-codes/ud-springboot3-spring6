@@ -15,20 +15,22 @@ import jakarta.validation.Valid;
 public class TodoService {
 	private static List<Todo> todos = new ArrayList<Todo>();
 	static{
-		todos.add(new Todo(1,"SpringFramework", "Learn Spring",
+		todos.add(new Todo(1,"jaymenorca", "Learn Spring",
 				LocalDate.now().plusWeeks(2), false));
-		todos.add(new Todo(2,"SpringBoot", "Learn SpringBoot",
+		todos.add(new Todo(2,"jaymenorca", "Learn SpringBoot",
 				LocalDate.now().plusWeeks(4), false));
-		todos.add(new Todo(3,"SpringJPA", "Learn SpringJPA",
+		todos.add(new Todo(3,"jaymenorca", "Learn SpringJPA",
 				LocalDate.now().plusWeeks(5), false));
-		todos.add(new Todo(4,"SpringBootMicroservices", "Learn SpringBoot Microservices",
+		todos.add(new Todo(4,"jaymenorca", "Learn SpringBoot Microservices",
 				LocalDate.now().plusWeeks(7), false));
-		todos.add(new Todo(5,"KafkaRabbitMQ", "Learn Apache Kafka Rabbit MQ",
+		todos.add(new Todo(5,"jaymenorca", "Learn Apache Kafka Rabbit MQ",
 				LocalDate.now().plusWeeks(8), false));
 	}
 	
-	public static List<Todo> findByUsername(String name) {
-		return todos;
+	public List<Todo> findByUsername(String name) {
+
+		List<Todo> tds = todos.stream().filter(t -> t.getUsername().equalsIgnoreCase(name)).toList();
+		return tds;
 	}
 	
 //	public Todo createToDo(String desc) {
@@ -51,10 +53,10 @@ public class TodoService {
 	public void addTodo(Todo todo) {
 		//todos.add(this.createToDo(description));
 		String desc = todo.getDescription();
-		String todoname = desc.replaceAll("\\s","");
-		
+		//String todoname = desc.replaceAll("\\s","");
+		String user = todo.getUsername();
 		Todo newtd = new Todo(
-				createId(), todoname, desc,todo.getTargetDate(), false);
+				createId(), user, desc,todo.getTargetDate(), false);
 		todos.add(newtd);
 	}
 

@@ -6,18 +6,20 @@ import jakarta.validation.constraints.Size;
 
 public class Todo {
 	private int id;
-	private String todoname;
+	private String username;
 	
+
+
 	@Size(min=10, message="Enter at least 10 chars")
 	private String description;
 	//@DateTimeFormat(pattern="yyyy-MM-dd")
 	private LocalDate targetDate;
 	private boolean done;
 	
-	public Todo(int id, String todoname, String description, LocalDate targetDate, boolean done) {
+	public Todo(int id, String username, String description, LocalDate targetDate, boolean done) {
 		super();
 		this.id = id;
-		this.todoname = todoname;		
+		this.username = username;		
 		this.description = description;
 		this.targetDate = targetDate;
 		this.done = done;
@@ -26,7 +28,7 @@ public class Todo {
 	
 	@Override
 	public String toString() {
-		return "Todo [id=" + id + ", todoname=" + todoname + ", description=" + description + ", targetDate="
+		return "Todo [id=" + id + ", username=" + username + ", description=" + description + ", targetDate="
 				+ targetDate + ", done=" + done + "]";
 	}
 
@@ -39,13 +41,6 @@ public class Todo {
 		this.id = id;
 	}
 
-	public String getTodoname() {
-		return todoname;
-	}
-
-	public void setTodoname(String todoname) {
-		this.todoname = todoname;
-	}
 
 	public String getDescription() {
 		return description;
@@ -71,5 +66,12 @@ public class Todo {
 		this.done = done;
 	}
 
+	public String getUsername() {
+		return username;
+	}
 
+
+	public void setUsername(String username) {
+		this.username = username;
+	}
 }
