@@ -1,4 +1,4 @@
-package jayslabs.todolistwebappdemo.login;
+package jayslabs.todolistwebappdemo.todo;
 
 import java.time.LocalDate;
 import java.util.List;
@@ -12,8 +12,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.SessionAttributes;
 
 import jakarta.validation.Valid;
-import jayslabs.todolistwebappdemo.todo.Todo;
-import jayslabs.todolistwebappdemo.todo.TodoService;
 
 @Controller
 @SessionAttributes("name")
