@@ -40,7 +40,8 @@ public class TodoController {
 	
 	@RequestMapping("addtodo")
 	public String showAddTodoPage(ModelMap model) {
-		Todo todo = new Todo(0, "jaymenorca","",LocalDate.now(), false);
+		String user = (String) model.get("name");
+		Todo todo = new Todo(0, user,"",LocalDate.now(), false);
 		//Todo todo = todosrvc.createToDo("");
 		model.put("todo",todo);
 		return "addtodo";

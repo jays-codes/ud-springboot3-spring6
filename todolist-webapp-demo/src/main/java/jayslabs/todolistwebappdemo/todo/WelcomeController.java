@@ -23,7 +23,7 @@ public class WelcomeController {
 	@RequestMapping(value="/", method=RequestMethod.GET)
 	public String goToWelcomePage(ModelMap map) {
 		
-		map.addAttribute("name", getLoggedinUsername());
+		map.put("name", getLoggedinUsername());
 		return "welcome";
 	}
 	
