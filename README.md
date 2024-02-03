@@ -2,6 +2,7 @@
 Jay's proj repo for Springboot 3 and Spring Framework 6 training (conducted by R.Karanam - udemy) (from latest). List below ARE NOT NOTES. They are topics covered as of latest. 
 
 proj: todolist-webapp-demo (dep: Spring Web, SpringBoot DevTools | jdk17, mvn, springboot 3.2.2)
+- added Springboot data jpa and H@ DB dependencies; Updated SecurityConfiguration - SecurityFilterChain, HttpSecurity, authorizeHttpRequest();
 - modified SpringSecurityConfiguration to add Users (UserDetails)
 - Added SecurityContext for retrieval of session attrib (name)
 - implemented spring-boot-starter-security; org.spring.security.core/crypto/provisioning APIs: User, UserDetails, BCryptPasswordEncoder, PasswordEncoder, InMemoryUserDetailsManager
