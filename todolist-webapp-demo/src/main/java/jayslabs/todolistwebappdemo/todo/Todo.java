@@ -2,12 +2,28 @@ package jayslabs.todolistwebappdemo.todo;
 
 import java.time.LocalDate;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.Transient;
 import jakarta.validation.constraints.Size;
 
+@Entity(name="todo")
 public class Todo {
+	@Id
 	private int id;
 	private String username;
 	
+	@Transient
+    private boolean isNew = true;
+
+	public boolean isNew() {
+		return isNew;
+	}
+
+
+	public void setIsNew(boolean isNew) {
+		this.isNew = isNew;
+	}
 
 
 	@Size(min=10, message="Enter at least 10 chars")
