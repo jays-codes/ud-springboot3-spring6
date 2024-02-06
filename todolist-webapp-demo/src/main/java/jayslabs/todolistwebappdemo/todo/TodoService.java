@@ -16,7 +16,7 @@ import jakarta.validation.Valid;
 public class TodoService {
 	
 //	@Autowired
-//	private static TodoSpringDataJpaRepository repo;
+//	private static TodoRepository repo;
 	
 	private static List<Todo> todos = new ArrayList<Todo>();
 	static{

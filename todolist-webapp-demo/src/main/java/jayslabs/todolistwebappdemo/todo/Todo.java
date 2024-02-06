@@ -15,6 +15,12 @@ public class Todo {
 	private int id;
 	private String username;
 	
+	public Todo() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+
 	@Transient
     private boolean isNew = true;
 

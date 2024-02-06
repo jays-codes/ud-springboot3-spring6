@@ -13,16 +13,18 @@ import org.springframework.web.bind.annotation.SessionAttributes;
 
 import jakarta.validation.Valid;
 
-//@Controller
+@Controller
 @SessionAttributes("name")
-public class TodoController {
+public class TodoControllerJpa {
 	
-	public TodoController(TodoService todosrvc) {
+	public TodoControllerJpa(TodoService todosrvc, TodoRepository repo) {
 		super();
 		this.todosrvc = todosrvc;
+		this.repo = repo;
 	}
-	
+
 	private TodoService todosrvc;
+	private TodoRepository repo;
 	
 	@RequestMapping("welcome")
 	public String gotoWelcomPage(ModelMap map) {
@@ -33,7 +35,7 @@ public class TodoController {
 	@RequestMapping("listtodos")
 	public String listAllTodos(ModelMap map) {
 		String name = (String) map.get("name");
-		List<Todo> todos =  todosrvc.findByUsername(name);
+		List<Todo> todos =  repo.findByUsername(name);
 		map.addAttribute("todos", todos);
 		return "listTodos";
 	}
