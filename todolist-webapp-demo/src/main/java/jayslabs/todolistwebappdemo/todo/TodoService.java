@@ -20,16 +20,16 @@ public class TodoService {
 	
 	private static List<Todo> todos = new ArrayList<Todo>();
 	static{
-		todos.add(new Todo(1,"jaymenorca", "Learn Spring",
-				LocalDate.now().plusWeeks(2), false));
-		todos.add(new Todo(2,"jaymenorca", "Learn SpringBoot",
-				LocalDate.now().plusWeeks(4), false));
-		todos.add(new Todo(3,"jaymenorca", "Learn SpringJPA",
-				LocalDate.now().plusWeeks(5), false));
-		todos.add(new Todo(4,"jaymenorca", "Learn SpringBoot Microservices",
-				LocalDate.now().plusWeeks(7), false));
-		todos.add(new Todo(5,"jaymenorca", "Learn Apache Kafka Rabbit MQ",
-				LocalDate.now().plusWeeks(8), false));
+//		todos.add(new Todo(1,"jaymenorca", "Learn Spring",
+//				LocalDate.now().plusWeeks(2), false));
+//		todos.add(new Todo(2,"jaymenorca", "Learn SpringBoot",
+//				LocalDate.now().plusWeeks(4), false));
+//		todos.add(new Todo(3,"jaymenorca", "Learn SpringJPA",
+//				LocalDate.now().plusWeeks(5), false));
+//		todos.add(new Todo(4,"jaymenorca", "Learn SpringBoot Microservices",
+//				LocalDate.now().plusWeeks(7), false));
+//		todos.add(new Todo(5,"jaymenorca", "Learn Apache Kafka Rabbit MQ",
+//				LocalDate.now().plusWeeks(8), false));
 //		repo.save(new Todo(1,"jaymenorca", "Learn Spring",
 //				LocalDate.now().plusWeeks(2), false));
 //		repo.save(new Todo(2,"jaymenorca", "Learn SpringBoot",
