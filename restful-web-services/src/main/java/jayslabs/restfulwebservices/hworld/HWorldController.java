@@ -10,4 +10,9 @@ public class HWorldController {
 	public String helloAction() {
 		return "Wazzzzzz upppppp!!!";
 	}
+	
+	@GetMapping(path="/yowbean")
+	public HWorld getHelloBean() {
+		return new HWorld("Imma Bean Yow!");
+	}
 }
