@@ -2,7 +2,7 @@
 Jay's proj repo for Springboot 3 and Spring Framework 6 training (conducted by R.Karanam - udemy) (from latest). List below ARE NOT NOTES. They are topics covered as of latest. 
 
 proj: todolist-webapp-demo (dep: Spring Web, SpringBoot DevTools | jdk17, mvn, springboot 3.2.2)
-- migrated to MySQL from H2; modified dependencies, application.properties
+- migrated to MySQL/Docker from H2; modified dependencies, application.properties
 - implemented all repo methods;
 - implemented JpaRepository, autowired into controller; implemnted custom find method,
 - mapped bean with H2 DB: @Entity, @Id, @GeneratedValue; used CURRENT_DATE(), prepopulated H2 DB via data.sql; spring.jpa.defer-datasource
