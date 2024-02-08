@@ -32,7 +32,7 @@ public class UserDAOService {
 		// Todo td = todos.stream().filter(t ->
 		// t.getId()==id).findFirst().get();//.orElse(null);
 
-		User user = users.stream().filter(u -> u.getId().equals(id)).findFirst().get();
+		User user = users.stream().filter(u -> u.getId().equals(id)).findFirst().orElse(null);
 		// TODO Auto-generated method stub
 		return user;
 	}
