@@ -2,6 +2,7 @@
 Jay's proj repo for Springboot 3 and Spring Framework 6 training (conducted by R.Karanam - udemy) (from latest). List below ARE NOT NOTES. They are topics covered as of latest. 
 
 proj: restfulwebservices (dep: Spring Web, Spring Data JPA, H2 Database, SpringBoot DevTools | jdk17, mvn, springboot 3.2.2)
+- implemented vesioning - URI
 - implemented i18n; messages.properties, MessageSource, getMessage(), Locale, getLocale()
 - setup accept header for XML response
 - setup for OPEN API/Swagger, generated API doc
