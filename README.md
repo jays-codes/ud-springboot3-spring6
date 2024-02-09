@@ -2,6 +2,7 @@
 Jay's proj repo for Springboot 3 and Spring Framework 6 training (conducted by R.Karanam - udemy) (from latest). List below ARE NOT NOTES. They are topics covered as of latest. 
 
 proj: restfulwebservices (dep: Spring Web, Spring Data JPA, H2 Database, SpringBoot DevTools | jdk17, mvn, springboot 3.2.2)
+- Added API Validation, @Valid, @Size, @Past; wrote custom ResponseEntity to handle invalid bean attributes (MethodArgumentNotValidException)
 - implemented DELETE API (@DeleteMapping)
 - implemented Custom exception handler, ErrorDetails - customize response body to display info on exception details
 - implemented custom NotFoundException (RuntimeException), set @ResponseStatus
