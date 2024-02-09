@@ -2,6 +2,7 @@
 Jay's proj repo for Springboot 3 and Spring Framework 6 training (conducted by R.Karanam - udemy) (from latest). List below ARE NOT NOTES. They are topics covered as of latest. 
 
 proj: restfulwebservices (dep: Spring Web, Spring Data JPA, H2 Database, SpringBoot DevTools | jdk17, mvn, springboot 3.2.2)
+- implemented Custom exception handler, ErrorDetails - customize response body to display info on exception details
 - implemented custom NotFoundException (RuntimeException), set @ResponseStatus
 - modified POST api to return appropo resp status (201) along with Location; ResponseEntity, ServletUriComponentBuilder
 - implemented POST API (@PostMapping): /users, updated dao
