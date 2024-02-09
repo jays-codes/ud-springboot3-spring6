@@ -4,6 +4,7 @@ import java.net.URI;
 import java.util.List;
 
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -43,4 +44,12 @@ public class UserResource {
 				.toUri();
 		return ResponseEntity.created(loc).build();
 	}
+	
+	@DeleteMapping(path = "/users/{id}")
+	public ResponseEntity<User> deleteUser(@PathVariable int id) {
+		User user = retrieveUser(id);
+		dao.deleteById(id);
+		return ResponseEntity.noContent().build();
+	}
+
 }

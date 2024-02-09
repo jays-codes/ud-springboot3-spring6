@@ -32,9 +32,13 @@ public class UserDAOService {
 		// Todo td = todos.stream().filter(t ->
 		// t.getId()==id).findFirst().get();//.orElse(null);
 
-		User user = users.stream().filter(u -> u.getId().equals(id)).findFirst().orElse(null);
-		// TODO Auto-generated method stub
+		User user = users.stream().filter(u -> u.getId().equals(id))
+				.findFirst().orElse(null);
 		return user;
+	}
+
+	public void deleteById(int id) {
+		users.removeIf(u-> u.getId().equals(id));
 	}
 
 }
