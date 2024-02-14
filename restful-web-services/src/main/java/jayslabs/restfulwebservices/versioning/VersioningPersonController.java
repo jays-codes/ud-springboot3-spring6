@@ -38,12 +38,16 @@ public class VersioningPersonController {
 
 	@GetMapping(path="/person/accept", produces="application/json")
 	public PersonV1 getV1PersonCN() {
-		return new PersonV1("Bob Belcher");
+		return new PersonV1("Bob Belcher CN");
 	}
 	
-	@GetMapping(path="/person/accept", produces="application/xml")
+	@GetMapping(path="/person/accept", produces="application/v2+json")
 	public PersonV2 getV2PersonCN() {
 		return getV2Person();
 	}
 	
+	@GetMapping(path="/person/accept", produces="application/v2+xml")
+	public PersonV2 getV2PersonXMLCN() {
+		return getV2Person();
+	}
 }
