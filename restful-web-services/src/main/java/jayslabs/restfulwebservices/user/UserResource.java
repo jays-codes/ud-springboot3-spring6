@@ -3,6 +3,10 @@ package jayslabs.restfulwebservices.user;
 import java.net.URI;
 import java.util.List;
 
+import org.springframework.hateoas.EntityModel;
+import org.springframework.hateoas.server.mvc.WebMvcLinkBuilder;
+import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.*;
+
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -29,10 +33,17 @@ public class UserResource {
 	}
 	
 	@GetMapping(path = "/users/{id}")
-	public User retrieveUser(@PathVariable int id) {
+	public EntityModel<User> retrieveUser(@PathVariable int id) {
 		User user = dao.findById(id);
 		if (user==null) throw new UserNotFoundException("id: "+id);
-		return user;
+		
+		EntityModel<User> emod = EntityModel.of(user);
+		WebMvcLinkBuilder link = 
+				linkTo(methodOn(this.getClass())
+						.retrieveAllUsers());
+		emod.add(link.withRel("all-users"));
+		
+		return emod;
 	}
 	
 	@PostMapping(path="/users")
@@ -49,7 +60,7 @@ public class UserResource {
 	
 	@DeleteMapping(path = "/users/{id}")
 	public ResponseEntity<User> deleteUser(@PathVariable int id) {
-		User user = retrieveUser(id);
+		EntityModel<User> user = retrieveUser(id);
 		dao.deleteById(id);
 		return ResponseEntity.noContent().build();
 	}
