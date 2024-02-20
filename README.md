@@ -2,6 +2,7 @@
 Jay's proj repo for Springboot 3 and Spring Framework 6 training (conducted by R.Karanam - udemy) (from latest). List below ARE NOT NOTES. They are topics covered as of latest. 
 
 proj: restfulwebservices (dep: Spring Web, Spring Data JPA, H2 Database, SpringBoot DevTools | jdk17, mvn, springboot 3.2.2)
+- SpringBoot HAL Explorer; added dep: org.springframework.data:spring-data-rest-hal-explorer
 - Customized REST API responses; Static/Dynamic Filtering - @JsonProperty; @JsonIgnore, @JsonIgnoreProperties; MappingJacksonValue, SimpleBeanPropertyFilter, FilterProvider, @JsonFilter; added Custom filtering method
 - HATEOAS; added dependency: spring-boot-starter-hateoas; used EntityModel, WebMvcLinkBuilder, linkTo(), methodOn(), withRel()
 - implemented versioning - Request Parameter, Custom Header, MediaType/Content Negotiation
