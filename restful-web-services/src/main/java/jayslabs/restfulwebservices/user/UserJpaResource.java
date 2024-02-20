@@ -19,15 +19,18 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import jakarta.validation.Valid;
+import jayslabs.restfulwebservices.user.jpa.PostRepository;
 import jayslabs.restfulwebservices.user.jpa.UserRepository;
 
 @RestController
 public class UserJpaResource {
 
 	private UserRepository repo;
+	private PostRepository postrepo;
 
-	public UserJpaResource(UserRepository repo) {
+	public UserJpaResource(UserRepository repo, PostRepository postrepo) {
 		this.repo = repo;
+		this.postrepo = postrepo;
 	}
 
 	@GetMapping(path = "/jpa/users")
@@ -68,4 +71,53 @@ public class UserJpaResource {
 		return ResponseEntity.noContent().build();
 	}
 
+	@GetMapping(path = "/jpa/users/{id}/posts")
+	public List<Post> getUserPosts(@PathVariable int id) {
+		Optional<User> user = repo.findById(id);
+		if (user.isEmpty()) throw new UserNotFoundException("id: "+id);
+		
+		List<Post> posts = user.get().getPosts();
+		
+		return posts;
+	}
+
+	@PostMapping(path="/jpa/users/{id}/posts")
+	public ResponseEntity<Post> addPost(@PathVariable int id, @Valid @RequestBody Post post) {
+
+		Optional<User> user = repo.findById(id);
+		if (user.isEmpty()) throw new UserNotFoundException("id: "+id);
+
+		post.setUser(user.get());
+		
+		user.get().getPosts().add(post);
+		
+		Post savedPost = postrepo.save(post);
+		//User savedUser = repo.save(user);
+		
+		URI loc=ServletUriComponentsBuilder
+				.fromCurrentRequest()
+				.path("/{id}")
+				.buildAndExpand(savedPost.getId())
+				.toUri();
+		return ResponseEntity.created(loc).build();
+	}
+	
+	@GetMapping(path = "/jpa/users/{id}/posts/{postid}")
+	public EntityModel<Post> getUserPost(@PathVariable int id, @PathVariable int postid) {
+		Optional<User> user = repo.findById(id);
+		if (user.isEmpty()) throw new UserNotFoundException("id: "+id);
+		
+		
+		Optional<Post> post = user.get().getPosts().stream().filter(p->p.getId()==postid).findFirst();
+		if (post.isEmpty()) throw new PostNotFoundException("id: "+id);
+		
+		EntityModel<Post> emod = EntityModel.of(post.get());
+		WebMvcLinkBuilder link = 
+				linkTo(methodOn(this.getClass())
+						.getUserPosts(id));
+		emod.add(link.withRel("all-posts"));
+		
+		return emod;
+	}
+	
 }

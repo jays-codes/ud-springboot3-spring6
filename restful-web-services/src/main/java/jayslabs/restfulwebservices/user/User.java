@@ -27,6 +27,14 @@ public class User {
 	@Past(message="Birthdate should be in the past.")
 	private LocalDate dob;
 	
+	public List<Post> getPosts() {
+		return posts;
+	}
+
+	public void setPosts(List<Post> posts) {
+		this.posts = posts;
+	}
+
 	@OneToMany(mappedBy="user")
 	@JsonIgnore
 	private List<Post> posts;
