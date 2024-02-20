@@ -2,6 +2,7 @@
 Jay's proj repo for Springboot 3 and Spring Framework 6 training (conducted by R.Karanam - udemy) (from latest). List below ARE NOT NOTES. They are topics covered as of latest. 
 
 proj: restfulwebservices (dep: Spring Web, Spring Data JPA, H2 Database, SpringBoot DevTools | jdk17, mvn, springboot 3.2.2)
+- Create 'Post' Entity to demo One-to-Many Entity relationship; @ManyToOne, @OneToMany, FetchType.LAZY, mappedBy
 - modified API to connect to H2 via JpaRepository
 - SpringBoot HAL Explorer; added dep: org.springframework.data:spring-data-rest-hal-explorer
 - Customized REST API responses; Static/Dynamic Filtering - @JsonProperty; @JsonIgnore, @JsonIgnoreProperties; MappingJacksonValue, SimpleBeanPropertyFilter, FilterProvider, @JsonFilter; added Custom filtering method
@@ -47,22 +48,22 @@ proj: todolist-webapp-demo (dep: Spring Web, SpringBoot DevTools | jdk17, mvn, s
 - used @Controller, @ResponseBody
 
 proj: jpa-hibernate-demo (dep: Spring Web, Spring Data JDBC, Spring Data JPA, H2 Databse | jdk 17, mvn, springboot 3.2.2)
-- created new demo proj for JPA, Hibernate concepts (Spring Web, Spring Data JDBC, Spring Data JPA, H2 Database)
-- added static jdbc url via spring.datasource.url for H2 DB; added schema.sql; created schema and table
-- created @Repository component w/ JdbcTemplate dependency (@Autowired), update(); created CommandLineRunner component with repository dependency to execute repo method inside run()
-- modified @Repository SQL to accept parameters; created pojo; added INSERT (the pojo) and DELETE SQL
-- added SELECT SQL to return pojo; used queryForObject() from JdbcTemplate and BeanPropertyRowMapper inside @Repository method
-- used JPA; used @Entity, @Id, @Column on javabean; create new @Repository (also @Transactional) with dependency on EntityManager (@PersistenceContext); used em.find(), em.merge, em.remove()
-- used SpringDataJPA - org.springframework.data.jpa.repository.JpaRepository; CRUD functionality automatically defined and autowired into instance
 - custom findby() in JpaRepository interface; JpaRepository.count() 
+- used SpringDataJPA - org.springframework.data.jpa.repository.JpaRepository; CRUD functionality automatically defined and autowired into instance
+- used JPA; used @Entity, @Id, @Column on javabean; create new @Repository (also @Transactional) with dependency on EntityManager (@PersistenceContext); used em.find(), em.merge, em.remove()
+- added SELECT SQL to return pojo; used queryForObject() from JdbcTemplate and BeanPropertyRowMapper inside @Repository method
+- modified @Repository SQL to accept parameters; created pojo; added INSERT (the pojo) and DELETE SQL
+- created @Repository component w/ JdbcTemplate dependency (@Autowired), update(); created CommandLineRunner component with repository dependency to execute repo method inside run()
+- added static jdbc url via spring.datasource.url for H2 DB; added schema.sql; created schema and table
+- created new demo proj for JPA, Hibernate concepts (Spring Web, Spring Data JDBC, Spring Data JPA, H2 Database)
 
 proj: springboot-demo 
-- created new project : springboot HWorld
-- create SpringBoot REST API; used @RestController, @RequestMapping, pojo (Landlord)
-- created profiles to simulate different environments; set active profile(spring.profiles.active); set logging according to profile
-- implemented configuration properties; defined ConfigurationPropertiesBean (@ConfigurationProperties); controller to test (config instance field is @Autowired)
-- packaged via mvn clean install; console execution
 - enabled Springboot Actuator
+- packaged via mvn clean install; console execution
+- implemented configuration properties; defined ConfigurationPropertiesBean (@ConfigurationProperties); controller to test (config instance field is @Autowired)
+- created profiles to simulate different environments; set active profile(spring.profiles.active); set logging according to profile
+- create SpringBoot REST API; used @RestController, @RequestMapping, pojo (Landlord)
+- created new project : springboot HWorld
 
 proj: spring-framework-demo2
 - merged Configuration with main entrypoint class
