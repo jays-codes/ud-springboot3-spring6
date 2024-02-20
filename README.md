@@ -2,6 +2,7 @@
 Jay's proj repo for Springboot 3 and Spring Framework 6 training (conducted by R.Karanam - udemy) (from latest). List below ARE NOT NOTES. They are topics covered as of latest. 
 
 proj: restfulwebservices (dep: Spring Web, Spring Data JPA, H2 Database, SpringBoot DevTools | jdk17, mvn, springboot 3.2.2)
+- moved from H2 DB to MySQL/Docker
 - implemented APIs: GET getUserPost, POST save user post, GET getAllUserPosts
 - Create 'Post' Entity to demo One-to-Many Entity relationship; @ManyToOne, @OneToMany, FetchType.LAZY, mappedBy
 - modified API to connect to H2 via JpaRepository
