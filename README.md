@@ -1,31 +1,8 @@
 # ud-springboot3-spring6
 Jay's proj repo for Springboot 3 and Spring Framework 6 training (conducted by R.Karanam - udemy) (from latest). List below ARE NOT NOTES. They are topics covered as of latest. 
 
-proj: restfulwebservices (dep: Spring Web, Spring Data JPA, H2 Database, SpringBoot DevTools | jdk17, mvn, springboot 3.2.2)
-- prepared REST API to be called from react app; defined WebMvcConfigurer; @CrossOrigin
-- added spring-boot-starter-security; spring.security.user.name/password to app.prop; SecuritySpringConfiguration @Configuration to define SecurityFilterChain (@Bean), HttpSecurity, authorizeHttpRequests(), httpBasic(), .csrf(), csrf.disable()
-- moved from H2 DB to MySQL/Docker
-- implemented APIs: GET getUserPost, POST save user post, GET getAllUserPosts
-- Create 'Post' Entity to demo One-to-Many Entity relationship; @ManyToOne, @OneToMany, FetchType.LAZY, mappedBy
-- modified API to connect to H2 via JpaRepository
-- SpringBoot HAL Explorer; added dep: org.springframework.data:spring-data-rest-hal-explorer
-- Customized REST API responses; Static/Dynamic Filtering - @JsonProperty; @JsonIgnore, @JsonIgnoreProperties; MappingJacksonValue, SimpleBeanPropertyFilter, FilterProvider, @JsonFilter; added Custom filtering method
-- HATEOAS; added dependency: spring-boot-starter-hateoas; used EntityModel, WebMvcLinkBuilder, linkTo(), methodOn(), withRel()
-- implemented versioning - Request Parameter, Custom Header, MediaType/Content Negotiation
-- implemented vesioning - URI
-- implemented i18n; messages.properties, MessageSource, getMessage(), Locale, getLocale()
-- setup accept header for XML response
-- setup for OPEN API/Swagger, generated API doc
-- Added API Validation, @Valid, @Size, @Past; wrote custom ResponseEntity to handle invalid bean attributes (MethodArgumentNotValidException)
-- implemented DELETE API (@DeleteMapping)
-- implemented Custom exception handler, ErrorDetails - customize response body to display info on exception details
-- implemented custom NotFoundException (RuntimeException), set @ResponseStatus
-- modified POST api to return appropo resp status (201) along with Location; ResponseEntity, ServletUriComponentBuilder
-- implemented POST API (@PostMapping): /users, updated dao
-- wrote User @RestController, Bean, DAOService(@Component), implemented GET APIs: /users, /users/{id}
-- wrote @RestController, get api (@RestController, @RequestMpping, @GetMapping), get api returning bean (JSON resp)
-
 proj: todolist-webapp-demo (dep: Spring Web, SpringBoot DevTools | jdk17, mvn, springboot 3.2.2)
+- start converting app to REST API app to be called from react; implemented retrieveTodosByUser API
 - migrated to MySQL/Docker from H2; modified dependencies, application.properties
 - implemented all repo methods;
 - implemented JpaRepository, autowired into controller; implemnted custom find method,
@@ -50,6 +27,30 @@ proj: todolist-webapp-demo (dep: Spring Web, SpringBoot DevTools | jdk17, mvn, s
 - capture Query Params (@RequestParam); used org.springframework.ui.ModelMap; used el in jsp to output model
 - added jsp; controller, view resolvers in app.prop; tomcat-embed-jasper dependency
 - used @Controller, @ResponseBody
+
+proj: restfulwebservices (dep: Spring Web, Spring Data JPA, H2 Database, SpringBoot DevTools | jdk17, mvn, springboot 3.2.2)
+- prepared REST API to be called from react app; defined WebMvcConfigurer; @CrossOrigin
+- added spring-boot-starter-security; spring.security.user.name/password to app.prop; SecuritySpringConfiguration @Configuration to define SecurityFilterChain (@Bean), HttpSecurity, authorizeHttpRequests(), httpBasic(), .csrf(), csrf.disable()
+- moved from H2 DB to MySQL/Docker
+- implemented APIs: GET getUserPost, POST save user post, GET getAllUserPosts
+- Create 'Post' Entity to demo One-to-Many Entity relationship; @ManyToOne, @OneToMany, FetchType.LAZY, mappedBy
+- modified API to connect to H2 via JpaRepository
+- SpringBoot HAL Explorer; added dep: org.springframework.data:spring-data-rest-hal-explorer
+- Customized REST API responses; Static/Dynamic Filtering - @JsonProperty; @JsonIgnore, @JsonIgnoreProperties; MappingJacksonValue, SimpleBeanPropertyFilter, FilterProvider, @JsonFilter; added Custom filtering method
+- HATEOAS; added dependency: spring-boot-starter-hateoas; used EntityModel, WebMvcLinkBuilder, linkTo(), methodOn(), withRel()
+- implemented versioning - Request Parameter, Custom Header, MediaType/Content Negotiation
+- implemented vesioning - URI
+- implemented i18n; messages.properties, MessageSource, getMessage(), Locale, getLocale()
+- setup accept header for XML response
+- setup for OPEN API/Swagger, generated API doc
+- Added API Validation, @Valid, @Size, @Past; wrote custom ResponseEntity to handle invalid bean attributes (MethodArgumentNotValidException)
+- implemented DELETE API (@DeleteMapping)
+- implemented Custom exception handler, ErrorDetails - customize response body to display info on exception details
+- implemented custom NotFoundException (RuntimeException), set @ResponseStatus
+- modified POST api to return appropo resp status (201) along with Location; ResponseEntity, ServletUriComponentBuilder
+- implemented POST API (@PostMapping): /users, updated dao
+- wrote User @RestController, Bean, DAOService(@Component), implemented GET APIs: /users, /users/{id}
+- wrote @RestController, get api (@RestController, @RequestMpping, @GetMapping), get api returning bean (JSON resp)
 
 proj: jpa-hibernate-demo (dep: Spring Web, Spring Data JDBC, Spring Data JPA, H2 Databse | jdk 17, mvn, springboot 3.2.2)
 - custom findby() in JpaRepository interface; JpaRepository.count() 
