@@ -2,6 +2,7 @@
 Jay's proj repo for Springboot 3 and Spring Framework 6 training (conducted by R.Karanam - udemy) (from latest). List below ARE NOT NOTES. They are topics covered as of latest. 
 
 proj: restfulwebservices (dep: Spring Web, Spring Data JPA, H2 Database, SpringBoot DevTools | jdk17, mvn, springboot 3.2.2)
+- prepared REST API to be called from react app; defined WebMvcConfigurer; @CrossOrigin
 - added spring-boot-starter-security; spring.security.user.name/password to app.prop; SecuritySpringConfiguration @Configuration to define SecurityFilterChain (@Bean), HttpSecurity, authorizeHttpRequests(), httpBasic(), .csrf(), csrf.disable()
 - moved from H2 DB to MySQL/Docker
 - implemented APIs: GET getUserPost, POST save user post, GET getAllUserPosts
