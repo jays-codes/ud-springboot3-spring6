@@ -26,12 +26,12 @@ public class HWorldController {
 	
 	@GetMapping(path="/yowbean")
 	public HWorld getHelloBean() {
-		return new HWorld("Imma Bean Yow!");
+		return new HWorld("Imma Bean Yow!...uhmm... I'm being called from React...");
 	}
 	
 	@GetMapping(path="/hello/pathparam/{name}")
 	public HWorld getHelloWithPathVar(@PathVariable String name) {
-		return new HWorld("Imma Bean Yow! Ma nem is: " + name);
+		return new HWorld("Imma Bean Yow! Yo React! Ma nem is: " + name);
 	}
 	
 	@GetMapping(path="/hello-i18n")
