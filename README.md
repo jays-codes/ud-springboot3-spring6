@@ -2,6 +2,7 @@
 Jay's proj repo for Springboot 3 and Spring Framework 6 training (conducted by R.Karanam - udemy) (from latest). List below ARE NOT NOTES. They are topics covered as of latest. 
 
 proj: todolist-webapp-demo (dep: Spring Web, SpringBoot DevTools | jdk17, mvn, springboot 3.2.2)
+- implemented REST API for retrieveTodo, deleteTodo; ResponseEntity
 - start converting app to REST API app to be called from react; implemented retrieveTodosByUser API
 - migrated to MySQL/Docker from H2; modified dependencies, application.properties
 - implemented all repo methods;
