@@ -61,4 +61,8 @@ public class TodoResource {
 		return todo;
 	}
 	
+	@GetMapping(path="/basicauth")
+	public String basicAuthCheck() {
+		return "Success";
+	}
 }

@@ -1,4 +1,4 @@
-package jayslabs.restfulwebservices.hworld;
+package jayslabs.todolistwebappdemo.todo;
 
 import java.util.Locale;
 
@@ -19,10 +19,7 @@ public class HWorldController {
 		this.msgSource = msgSource;
 	}
 
-	@GetMapping(path="/basicauth")
-	public String basicAuthCheck() {
-		return "Success";
-	}
+
 	
 	@GetMapping(path="/yow")
 	public String helloAction() {
