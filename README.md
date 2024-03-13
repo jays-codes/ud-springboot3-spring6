@@ -2,6 +2,7 @@
 Jay's proj repo for Springboot 3 and Spring Framework 6 training (conducted by R.Karanam - udemy) (from latest). List below ARE NOT NOTES. They are topics covered as of latest. 
 
 proj: todolist-webapp-demo (dep: Spring Web, SpringBoot DevTools | jdk17, mvn, springboot 3.2.2)
+- implemented Basic Auth; new API (GET) to receive token generated from react
 - setup basic auth; SecurityFilterChain; csrf.disable; sessionManagement(STATELESS); httpBasic(Customizer.withDefaults); authorizeHttpRequest()
 - added REST API for updateTodo (PUT), createTodo(POST); @RequestBody
 - implemented REST API for retrieveTodo(GET), deleteTodo(DELETE); ResponseEntity
