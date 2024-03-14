@@ -47,23 +47,23 @@ public class SpringSecurityConfiguration {
 
 	@Bean
 	public SecurityFilterChain filterChain(HttpSecurity httpsec) throws Exception {
-		httpsec.authorizeHttpRequests(
+		return httpsec.authorizeHttpRequests(
 				auth -> 
 				auth
 				.requestMatchers(HttpMethod.OPTIONS, "/**").permitAll()
-				.anyRequest().authenticated());
+				.anyRequest().authenticated())
 		
-		//httpsec.formLogin(Customizer.withDefaults());
+		//.formLogin(Customizer.withDefaults())
 		
-		httpsec.httpBasic(Customizer.withDefaults());
+		.httpBasic(Customizer.withDefaults())
 		
-		httpsec.sessionManagement(session -> session.sessionCreationPolicy(
-				SessionCreationPolicy.STATELESS));
+		.sessionManagement(session -> session.sessionCreationPolicy(
+				SessionCreationPolicy.STATELESS))
 		
-		httpsec.csrf(csrf->csrf.disable());
+		.csrf(csrf->csrf.disable())
 		
-		//httpsec.headers(header->header.frameOptions(frameOptions->frameOptions.disable()));
+		//.headers(header->header.frameOptions(frameOptions->frameOptions.disable()))
 		
-		return httpsec.build();
+		.build();
 	}
 }
