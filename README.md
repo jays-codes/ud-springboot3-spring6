@@ -2,7 +2,7 @@
 Jay's proj repo for Springboot 3 and Spring Framework 6 training (conducted by R.Karanam - udemy) (from latest). List below ARE NOT NOTES. They are topics covered as of latest. 
 
 proj: todolist-webapp-demo (dep: Spring Web, SpringBoot DevTools | jdk17, mvn, springboot 3.2.2)
-- Mockito Annotations; @Mock, @ExtendWith, @InjectMocks
+- Mockito Annotations; @Mock, @ExtendWith, @InjectMocks; thenReturn() chain; Mockito.anyInt()
 - created Mock for service; mock(), when(), thenReturn()
 - implemented Mockito; dep: mockito-core; created stubs for Service
 - implemented JWT Authentication
