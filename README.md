@@ -2,6 +2,7 @@
 Jay's proj repo for Springboot 3 and Spring Framework 6 training (conducted by R.Karanam - udemy) (from latest). List below ARE NOT NOTES. They are topics covered as of latest. 
 
 proj: todolist-webapp-demo (dep: Spring Web, SpringBoot DevTools | jdk17, mvn, springboot 3.2.2)
+- created Mock for service; mock(), when(), thenReturn()
 - implemented Mockito; dep: mockito-core; created stubs for Service
 - implemented JWT Authentication
 - implemented Basic Auth; new API (GET) to receive token generated from react
