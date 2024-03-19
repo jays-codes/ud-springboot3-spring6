@@ -2,6 +2,7 @@
 Jay's proj repo for Springboot 3 and Spring Framework 6 training (conducted by R.Karanam - udemy) (from latest). List below ARE NOT NOTES. They are topics covered as of latest. 
 
 proj: spring-security-demo (dep: Spring Web, Spring Security | jdk21, gradle, springboot 3.2.3)
+- moved credentials to H2 DB; added dataSource() to SecurityConfig; EmbeddedDatabaseBuilder, setType(), addScript(); modified userDetailsService to use dataSource arg, injected; JdbcUserDetailsManager
 - User Credentials; in-memory; implemented UserDetailsService, UserDetails, InMemoryUserDetailsManager
 - implemented CORS configuration, corsConfigurer(); local config, @CrossOrigin
 - Disable CSRF; override default security filter chain; created custom Security configuration; .csrf()
