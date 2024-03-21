@@ -15,6 +15,7 @@ import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.jdbc.JdbcDaoImpl;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.provisioning.JdbcUserDetailsManager;
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;
@@ -69,12 +70,16 @@ public class BasicAuthSecurityConfiguration {
 		
         var user1 = User
                 .withUsername("jaymenorca")
-                .password("{noop}123456")
+                //.password("{noop}123456")
+                .password("123456")
+                .passwordEncoder( pwd -> passwordEncoder().encode(pwd))
                 .roles("ADMIN")
                 .build();
         
         var user2 = User.withUsername("ethan")
-                .password("{noop}hello123")
+                //.password("{noop}hello123")
+        		.password("hello123")
+        		.passwordEncoder(pwd->passwordEncoder().encode(pwd))
                 .roles("USER")
                 .build();
         
@@ -83,5 +88,10 @@ public class BasicAuthSecurityConfiguration {
         jdbcUserDetailsManager.createUser(user2);
         
         return jdbcUserDetailsManager;
+	}
+	
+	@Bean
+	public BCryptPasswordEncoder passwordEncoder() {
+		return new BCryptPasswordEncoder();
 	}
 }
