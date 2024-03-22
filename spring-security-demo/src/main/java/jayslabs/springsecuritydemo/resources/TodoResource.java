@@ -19,7 +19,7 @@ public class TodoResource {
 	private Logger logger = LoggerFactory.getLogger(getClass());
 	
 	private static final List<Todo> TODOS_LIST = List.of(
-			new Todo("jaymenorca", "Learn SpringBoot"),
+			new Todo("jaymenorca", "Learn SpringBoot 5"),
 			new Todo("jaymenorca", "Learn Springd Data JPA"),
 			new Todo("jaymenorca", "Learn SpringBoot Microservices"),
 			new Todo("jaymenorca", "Learn SpringBoot/Kafka")
