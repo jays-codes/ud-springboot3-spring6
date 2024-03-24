@@ -1,6 +1,9 @@
 # ud-springboot3-spring6
 Jay's proj repo for Springboot 3 and Spring Framework 6 training (conducted by R.Karanam - udemy) (from latest). List below ARE NOT NOTES. They are topics covered as of latest. 
 
+proj: spring-security-oauth-demo (dep: Spring Web, SpringBoot DevTools, Spring OAuth2 Client | jdk21, gradle, springboot 3.2.4)
+- created new demo proj for Spring Security - OAuth2 (SpringBoot 3.2.4, gradle, jdk 21, Spring Web, Spring OAuth2 client, SpringBoot DevTools
+
 proj: spring-security-demo (dep: Spring Web, Spring Security | jdk21, gradle, springboot 3.2.3)
 - explored Global & Method Authorization; @EnableMethodSecurity, @PreAuthorize, @PostAuthorize, hasRole @RolesAllowed, @Secured
 - implemented JWT Authentication; create JWTSecurityConfiguration, JWTAuthenticationResource; uses Oauth2 resource server; JwtEncoder/Decoder; JwtClaimsSet; security.core.Authentication
@@ -11,7 +14,7 @@ proj: spring-security-demo (dep: Spring Web, Spring Security | jdk21, gradle, sp
 - Disable CSRF; override default security filter chain; created custom Security configuration; .csrf()
 - implemented demo for CSRF; api to retrieve csrf token (CsrfToken) from HttpServletRequest
 - Form-based Authentication; implemented Basic Auth; added devtools dep
-- created new demo proj for Spring Security (gradle, jdk 21, Spring Web, Spring Security 
+- created new demo proj for Spring Security (gradle, jdk 21, Spring Web, Spring Security)
 
 proj: todolist-webapp-demo (dep: Spring Web, SpringBoot DevTools | jdk17, mvn, springboot 3.2.2)
 - Mockito Annotations; @Mock, @ExtendWith, @InjectMocks; thenReturn() chain; Mockito.anyInt()
