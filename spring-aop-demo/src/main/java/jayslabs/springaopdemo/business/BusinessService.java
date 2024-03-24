@@ -17,6 +17,9 @@ public class BusinessService {
 	
 	public int calculateMax() {
 		int[] nums = datasrvc.retrieveData();
+		
+		//throw new RuntimeException("Something went wrong...");
+		
 		return Arrays.stream(nums).max().orElse(0);
 	}
 }
