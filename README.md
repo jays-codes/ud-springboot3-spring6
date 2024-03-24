@@ -2,6 +2,7 @@
 Jay's proj repo for Springboot 3 and Spring Framework 6 training (conducted by R.Karanam - udemy) (from latest). List below ARE NOT NOTES. They are topics covered as of latest. 
 
 proj: spring-aop-demo (dep: <none> | jdk21, gradle, springboot 3.2.4)
+- create PerformanceTrackingAspect; used @Around, ProceedingJoinPoint, proceed()
 - @After, @AfterReturning / Object arg in Advice for results, @AfterThrowing, Exception arg in Advice
 - setup @Service and @Repository components; implemented CommandLineRunner; created LoggingAspect, @Aspect, defined @Pointcut/execution point/JoinPoint, @Before
 - created new demo proj for Spring AOP (SpringBoot 3.2.4, gradle, jdk 21
