@@ -2,6 +2,7 @@
 Jay's proj repo for Springboot 3 and Spring Framework 6 training (conducted by R.Karanam - udemy) (from latest). List below ARE NOT NOTES. They are topics covered as of latest. 
 
 proj: spring-security-oauth-demo (dep: Spring Web, SpringBoot DevTools, Spring OAuth2 Client | jdk21, gradle, springboot 3.2.4)
+- created OauthSecurityConfiguration; log on to springboot using google account; oauth2Login(); generated client id/secret from google cloud api
 - created new demo proj for Spring Security - OAuth2 (SpringBoot 3.2.4, gradle, jdk 21, Spring Web, Spring OAuth2 client, SpringBoot DevTools
 
 proj: spring-security-demo (dep: Spring Web, Spring Security | jdk21, gradle, springboot 3.2.3)
