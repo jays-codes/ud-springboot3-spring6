@@ -2,6 +2,7 @@
 Jay's proj repo for Springboot 3 and Spring Framework 6 training (conducted by R.Karanam - udemy) (from latest). List below ARE NOT NOTES. They are topics covered as of latest. 
 
 proj: spring-aop-demo (dep: <none> | jdk21, gradle, springboot 3.2.4)
+- added spring-boot-starter-web; added gradle task and new run config
 - created custom annotation to map to specific pointcut - @TrackTime
 - created CommonPointcutConfig; used bean arg for pointcuts
 - create PerformanceTrackingAspect; used @Around, ProceedingJoinPoint, proceed()
