@@ -9,4 +9,7 @@ public class CommonPointcutConfig {
 	
 	@Pointcut("bean(*Service*)")
 	public void beanConfig() {}
+	
+	@Pointcut("@annotation(jayslabs.springaopdemo.annotation.TrackTime)")
+	public void annoConfig() {}
 }
