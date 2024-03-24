@@ -10,6 +10,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.core.annotation.Order;
 import org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseBuilder;
 import org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseType;
+import org.springframework.security.config.annotation.method.configuration.EnableMethodSecurity;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.core.userdetails.User;
@@ -22,14 +23,19 @@ import org.springframework.web.servlet.config.annotation.CorsRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 
-//@Configuration
+@Configuration
+@EnableMethodSecurity(jsr250Enabled = true, securedEnabled = true)
 public class BasicAuthSecurityConfiguration {
 	
 	@Bean
 	@Order(SecurityProperties.BASIC_AUTH_ORDER)
 	SecurityFilterChain defaultSecurityFilterChain(HttpSecurity http) throws Exception {
 		
-		http.authorizeHttpRequests((requests) -> requests.anyRequest().authenticated());
+		http.authorizeHttpRequests(
+				(requests) -> requests
+				//.requestMatchers("/users").hasRole("ADMIN")	
+				.anyRequest().authenticated()
+		);
 		
         http.sessionManagement(session -> session.
                 sessionCreationPolicy(SessionCreationPolicy.STATELESS));
