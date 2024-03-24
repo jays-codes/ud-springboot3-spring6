@@ -16,19 +16,19 @@ public class LoggingAspect {
 	
 	private Logger logger = LoggerFactory.getLogger(getClass());
 
-	@Before("execution(* jayslabs.springaopdemo.*.*.*(..))")
+	@Before("jayslabs.springaopdemo.aspect.CommonPointcutConfig.allPackages()")
 	public void logMethodCall(JoinPoint joinpt) {
 		logger.info("Before Aspect - {} is called with args: {}", 
 				joinpt, joinpt.getArgs());
 	}
 
-	@After("execution(* jayslabs.springaopdemo.*.*.*(..))")
+	@After("jayslabs.springaopdemo.aspect.CommonPointcutConfig.allPackages()")
 	public void logMethodCallAfterExecution(JoinPoint joinpt) {
 		logger.info("After Execution Aspect - {} has executed.", joinpt);
 	}
 
 	@AfterReturning(
-			pointcut="execution(* jayslabs.springaopdemo.*.*.*(..))",
+			pointcut="jayslabs.springaopdemo.aspect.CommonPointcutConfig.allPackages()",
 			returning="resultVal"
 			)
 	public void logMethodCallAfterSuccessExecution(JoinPoint joinpt, Object resultVal) {
@@ -36,7 +36,7 @@ public class LoggingAspect {
 	}
 	
 	@AfterThrowing(
-			pointcut="execution(* jayslabs.springaopdemo.*.*.*(..))",
+			pointcut="jayslabs.springaopdemo.aspect.CommonPointcutConfig.allPackages()",
 			throwing="exception"
 			)
 	public void logMethodCallAfterException(JoinPoint joinpt, Exception exception) {
