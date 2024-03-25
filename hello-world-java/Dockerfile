@@ -1,4 +1,9 @@
-FROM openjdk:18.0-slim
-COPY target/*.jar app.jar
-EXPOSE 5000
-ENTRYPOINT ["java","-jar","/app.jar"]
+FROM maven:3.9.6-eclipse-temurin-21 AS build
+WORKDIR /home/app
+COPY . /home/app
+RUN mvn -f /home/app/pom.xml clean package
+
+FROM eclipse-temurin:21-jdk
+EXPOSE 8082
+COPY --from=build /home/app/target/*.jar app.jar
+ENTRYPOINT [ "sh", "-c", "java -jar /app.jar" ]
