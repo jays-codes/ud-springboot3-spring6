@@ -2,6 +2,7 @@
 Jay's proj repo for Springboot 3 and Spring Framework 6 training (conducted by R.Karanam - udemy) (from latest). List below ARE NOT NOTES. They are topics covered as of latest. 
 
 proj: hello-world-java (DOCKER demo)
+- deployed SpringBoot HWorld to AWS Elastic BeanStalk (EBS)
 - build docker image using mvn spring-boot plugin, spring-boot:build-image; used jdk 17
 - enabled caching in Dockerfile to speed up build
 - created Dockerfile; optimazed Dockerfile to run maven build (clean, package) as well as deploy
