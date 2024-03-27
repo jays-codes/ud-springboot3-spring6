@@ -10,7 +10,7 @@ public class HelloWorldController {
     public String helloWorld() {
 		// Implemented using String Templates
         return """
-                { message: Wazzzzzzap!!!! v5 }
+                { message: Wazzzzzzap!!!! v1. going to AWS! }
                """;
     }
 }
