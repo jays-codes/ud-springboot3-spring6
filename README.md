@@ -2,6 +2,7 @@
 Jay's proj repo for Springboot 3 and Spring Framework 6 training (conducted by R.Karanam - udemy) (from latest). List below ARE NOT NOTES. They are topics covered as of latest. 
 
 pre-built proj: 02-rest-api-mysql
+- setup MySQL in Amazon RDS, uploaded app to EBS
 - SpringBoot REST API w/ MySQL DB on Docker
   
 pre-built proj: hello-world-java (DOCKER demo)
