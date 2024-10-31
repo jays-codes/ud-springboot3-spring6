@@ -1,5 +1,5 @@
 # ud-springboot3-spring6
-Jay's proj repo for Springboot 3 and Spring Framework 6 training (conducted by R.Karanam - udemy) (from latest). List below ARE NOT NOTES. They are topics covered as of latest. 
+Jay's proj repo for Springboot 3 and Spring Framework 6 Templates/Samples. List below ARE NOT NOTES. They are topics covered (sorted by latest) 
 
 pre-built proj: rest-api-full-stack-h2
 - Prep and Deploy Full Stack SpringBoot RESTful APIs project to AWS EBS (H2 DB), front end (reactjs) in local
